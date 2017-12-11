@@ -1,0 +1,6 @@
+<li>
+	<input type="text" name="burger_name" value="{{ id }} {{ burger_name }}"> 
+	{{#unless devoured}}
+		<button type="submit" data-id="{{id}}" class="devour-it-btn">Devour It!</button>
+	{{/unless}}
+</li>

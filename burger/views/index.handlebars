@@ -1,0 +1,29 @@
+<img src="https://image.flaticon.com/icons/svg/198/198416.svg" id="cheeseburger" alt="Burger image">
+<div class="wrap">
+  <h2 id="maintitle">Eat-Da-Burger</h2>
+
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burger-block devoured = false}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burger-block devoured = true}}
+      {{/if}}
+    {{/each}}
+  </ul>
+
+
+  <div class="sub-wrap">
+    
+    <form class="create-form" id="form">
+      <input type="text" id="ca" name="burger_name">
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  <div>
+</div>
